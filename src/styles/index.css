@@ -1,5 +1,11 @@
 :root {
-  --primary-color-white: #ffffff;
+  --primary-color-black: #101828;
+  --primary-color-black-transparent: rgba(16, 24, 40, 0.6);
+  --primary-color-grey: #475467;
+  --primary-color-red: #e44848;
+  --primary-color-yellow: #ffc531;
+  --primary-color-dark-white: #f2f4f7;
+  --primary-color-light-white: #f7f7f7;
 }
 
 html {
@@ -16,7 +22,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Innerspace', serif;
+  font-family: 'Inter', serif;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -29,7 +35,6 @@ h5,
 h6,
 p {
   margin: 0;
-  font-family: 'Roboto', Arial, sans-serif;
 }
 
 ol,
@@ -49,8 +54,9 @@ a {
 }
 
 img {
-  vertical-align: middle;
   border-style: none;
+  display: block;
+  /* width: 100%; */
 }
 
 button {
