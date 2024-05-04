@@ -1,12 +1,15 @@
-import CatalogFilters from '../../components/CatalogFilters/CatalogFilters';
+import Container from '../../components/Container/Container';
 import ListOfCars from '../../components/ListOfCars/ListOfCars';
+import css from './Catalog.module.css';
 
 const Catalog = () => {
   return (
-    <div>
-      <CatalogFilters />
+    <Container>
+      {/* <div className={css.wrapper}> */}
+      {/* <CatalogFilters /> */}
       <ListOfCars />
-    </div>
+      {/* </div> */}
+    </Container>
   );
 };
 

@@ -1,0 +1,16 @@
+.bg_img {
+  background-image: url('../../assets/img/bg_camper.jpg');
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh - 70px);
+  overflow: hidden;
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
+.text {
+  color: var(--primary-color-light-white);
+  font-style: 24px;
+  width: 40%;
+  font-weight: 500;
+}

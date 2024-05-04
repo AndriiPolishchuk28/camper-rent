@@ -14,7 +14,7 @@
 }
 
 .info_wrapper {
-  width: 100%;
+  width: 526px;
 }
 
 .title_wrapper {
@@ -49,6 +49,11 @@
 .svg_heart {
   fill: transparent;
   stroke: var(--primary-color-black);
+}
+
+.svg_heart_red {
+  fill: var(--primary-color-red);
+  stroke: var(--primary-color-red);
 }
 
 .rating_wrapper {
@@ -87,6 +92,9 @@
   font-weight: 400;
   line-height: 1.5;
   color: var(--primary-color-grey);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .detail_list_wrapper {
@@ -131,4 +139,9 @@
   line-height: 1.5;
   letter-spacing: -0.01em;
   color: #fff;
+}
+
+.btn_showmore:hover {
+  background-color: #d84343;
+  transition: background-color 250ms ease-in-out;
 }

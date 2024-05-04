@@ -1,14 +1,16 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { BASE_URL, PAGE_LIMIT, PAGE } from '../../constants/constants';
 
-const BASE_URL = 'https://65b5763341db5efd2867b860.mockapi.io';
 axios.defaults.baseURL = BASE_URL;
 
 export const getAllCars = createAsyncThunk(
   'cars/getAllCars',
-  async (_, thunkApi) => {
+  async (page, thunkApi) => {
     try {
-      const { data } = await axios.get('/adverts');
+      const { data } = await axios.get(
+        `/adverts?limit=${PAGE_LIMIT}&page=${page}`
+      );
       return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);

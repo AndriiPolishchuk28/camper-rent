@@ -1,0 +1,128 @@
+.content_wrapper {
+  width: 982px;
+  position: relative;
+  padding: 40px 24px 40px 40px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.btn_close {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+}
+
+.btn_close:hover > .svg_close {
+  stroke: var(--primary-color-red);
+  transition: stroke 250ms ease-in-out;
+}
+
+.svg_close {
+  stroke: var(--primary-color-black);
+}
+
+.title {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  color: var(--primary-color-black);
+  margin-bottom: 8px;
+}
+
+.svg_star {
+  fill: var(--primary-color-yellow);
+  margin-right: 4px;
+}
+
+.svg_location {
+  fill: transparent;
+  stroke: var(--primary-color-black);
+  margin-right: 4px;
+}
+
+.rating_wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.location_wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+
+.rating_text {
+  font-family: 'Inter', sans-serif;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--primary-color-black);
+}
+
+.price {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  color: var(--primary-color-black);
+  margin-bottom: 24px;
+}
+
+.wrapper_scroll {
+  height: 406px;
+  overflow: auto;
+  width: 918px;
+}
+
+.img_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-right: 16px;
+}
+
+.wrapper_scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.wrapper_scroll::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 7px;
+}
+
+.img_item {
+  width: calc((100% - 32px) / 3);
+}
+
+.img_item img {
+  object-fit: cover;
+  height: 310px;
+}
+
+.description {
+  color: var(--primary-color-grey);
+  font-weight: 400;
+  width: 902px;
+  margin-bottom: 44px;
+}
+
+.tab_wrapper {
+  display: flex;
+  gap: 40px;
+}
+
+.tabs {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--primary-color-black);
+  padding-bottom: 24px;
+  border-bottom: 5px solid transparent;
+}
+
+.active_tab {
+  border-bottom: 5px solid var(--primary-color-red);
+}
