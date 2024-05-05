@@ -1,6 +1,6 @@
 .form_wrapper {
   display: flex;
-  margin-top: 44px;
+  padding-top: 44px;
   gap: 24px;
 }
 

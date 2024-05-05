@@ -5,6 +5,8 @@ const initialState = {
   cars: [],
   favorites: [],
   page: 1,
+  error: null,
+  isLoading: false,
 };
 
 const carsSlice = createSlice({
@@ -28,13 +30,24 @@ const carsSlice = createSlice({
     },
   },
   extraReducers: (builder) =>
-    builder.addCase(getAllCars.fulfilled, (state, { payload }) => {
-      if (state.page === 1) {
-        state.cars = payload;
-      } else {
-        state.cars.push(...payload);
-      }
-    }),
+    builder
+      .addCase(getAllCars.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.error = null;
+        if (state.page === 1) {
+          state.cars = payload;
+        } else {
+          state.cars.push(...payload);
+        }
+      })
+      .addCase(getAllCars.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(getAllCars.rejected, (state, { payload }) => {
+        state.isLoading = false;
+        state.error = payload;
+      }),
 });
 
 export const { addCar, deleteCar, increasePage, resetCars } = carsSlice.actions;

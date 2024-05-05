@@ -1,0 +1,68 @@
+.main_wrapper {
+  padding-top: 44px;
+  display: flex;
+  gap: 24px;
+}
+
+.review_list {
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.review_item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background-color: var(--primary-color-dark-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first_letter {
+  font-family: 'Inter', sans-serif;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  color: var(--primary-color-red);
+}
+
+.name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.3;
+  color: var(--primary-color-black);
+}
+
+.comment {
+  font-weight: 400;
+  color: var(--primary-color-grey);
+}
+
+.stars_wrapper {
+  display: flex;
+  gap: 2px;
+}
+
+.svg_basic_color {
+  fill: var(--primary-color-dark-white);
+}
+
+.svg_yellow {
+  fill: var(--primary-color-yellow);
+}

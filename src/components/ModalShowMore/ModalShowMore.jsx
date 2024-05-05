@@ -5,7 +5,9 @@ import classNames from 'classnames';
 import { nanoid } from 'nanoid';
 import { useState } from 'react';
 import Features from '../Features/Features';
+import Reviews from '../Reviews/Reviews';
 Modal.setAppElement('#root');
+
 const ModalShowMore = ({ modalIsOpen, closeModal, car }) => {
   const { name, rating, reviews, location, price, gallery, description } = car;
   const customStyles = {
@@ -18,6 +20,7 @@ const ModalShowMore = ({ modalIsOpen, closeModal, car }) => {
       transform: 'translate(-50%, -50%)',
       padding: '0',
       outline: 'transparent',
+      borderRadius: '20px',
     },
     overlay: {
       backgroundColor: 'rgba(17, 18, 19, 0.4)',
@@ -92,6 +95,7 @@ const ModalShowMore = ({ modalIsOpen, closeModal, car }) => {
               </button>
             </div>
             {activeTab === 1 && <Features car={car} />}
+            {activeTab === 2 && <Reviews reviews={car.reviews} />}
           </div>
         </div>
       </Modal>
