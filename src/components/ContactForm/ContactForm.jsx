@@ -3,6 +3,7 @@ import * as Yup from 'yup';
 import css from './ContactForm.module.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { icons } from '../../assets';
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required('Name is required'),
@@ -18,7 +19,7 @@ const initialValues = {
 };
 
 const ContactForm = () => {
-  const handleSubmit = (values, { setSubmitting }) => {
+  const handleSubmit = (_, { setSubmitting }) => {
     setSubmitting(false);
     window.location.reload();
   };
@@ -63,16 +64,28 @@ const ContactForm = () => {
             </div>
             <div>
               <label htmlFor="bookingDate"></label>
-              <Field name="bookingDate" className={css.date}>
+              <Field name="bookingDate" className={css.input_wrapper}>
                 {({ field, form }) => (
-                  <DatePicker
-                    className={css.input}
-                    {...field}
-                    selected={field.value}
-                    onChange={(date) => form.setFieldValue(field.name, date)}
-                    placeholderText="Booking date"
-                    formatWeekDay={(nameOfDay) => nameOfDay.slice(0, 3)}
-                  />
+                  <div className={css.input_date_wrapper}>
+                    <DatePicker
+                      showIcon
+                      className={css.input}
+                      icon={
+                        <svg
+                          width={20}
+                          height={20}
+                          className={css.svg_calendar}
+                        >
+                          <use href={`${icons}#icon-schedule`}></use>
+                        </svg>
+                      }
+                      {...field}
+                      selected={field.value}
+                      onChange={(date) => form.setFieldValue(field.name, date)}
+                      placeholderText="Booking date"
+                      formatWeekDay={(nameOfDay) => nameOfDay.slice(0, 3)}
+                    />
+                  </div>
                 )}
               </Field>
             </div>

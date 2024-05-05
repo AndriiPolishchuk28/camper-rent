@@ -3,6 +3,9 @@
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 10px;
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .title {
@@ -35,7 +38,6 @@
   border: none;
   line-height: 1.25;
   color: var(--primary-color-black);
-  margin-bottom: 14px;
 }
 
 .input:focus {
@@ -72,4 +74,11 @@
 .btn_send:hover {
   background-color: #d84343;
   transition: background-color 250ms ease-in-out;
+}
+
+.svg_calendar {
+  fill: transparent;
+  stroke: var(--primary-color-black);
+  top: 50%;
+  transform: translateY(-50%);
 }
