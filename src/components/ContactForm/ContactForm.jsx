@@ -3,7 +3,6 @@ import * as Yup from 'yup';
 import css from './ContactForm.module.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { icons } from '../../assets';
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required('Name is required'),
@@ -72,6 +71,7 @@ const ContactForm = () => {
                     selected={field.value}
                     onChange={(date) => form.setFieldValue(field.name, date)}
                     placeholderText="Booking date"
+                    formatWeekDay={(nameOfDay) => nameOfDay.slice(0, 3)}
                   />
                 )}
               </Field>

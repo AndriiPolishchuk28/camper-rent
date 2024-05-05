@@ -109,7 +109,3 @@ a {
 .ReactModal__Content .ReactModal__Content--after-open {
   border-radius: 20px;
 }
-
-.react-datepicker-wrapper {
-  width: 100%;
-}

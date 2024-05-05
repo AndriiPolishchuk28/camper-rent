@@ -69,20 +69,3 @@ const Features = ({ car }) => {
 };
 
 export default Features;
-
-// {
-//     airConditioner,
-//     bathroom,
-//     kitchen,
-//     beds,
-//     TV,
-//     CD,
-//     radio,
-//     shower,
-//     toilet,
-//     freezer,
-//     hob,
-//     microwave,
-//     gas,
-//     water,
-//   }
