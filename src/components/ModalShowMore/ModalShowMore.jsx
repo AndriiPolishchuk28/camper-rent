@@ -6,8 +6,8 @@ import { nanoid } from 'nanoid';
 import { useState } from 'react';
 import Features from '../Features/Features';
 import Reviews from '../Reviews/Reviews';
-Modal.setAppElement('#root');
 
+Modal.setAppElement('#root');
 const ModalShowMore = ({ modalIsOpen, closeModal, car }) => {
   const { name, rating, reviews, location, price, gallery, description } = car;
   const customStyles = {
@@ -32,7 +32,6 @@ const ModalShowMore = ({ modalIsOpen, closeModal, car }) => {
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
-  console.log(activeTab);
 
   return (
     <div>
@@ -41,7 +40,6 @@ const ModalShowMore = ({ modalIsOpen, closeModal, car }) => {
         onRequestClose={closeModal}
         style={customStyles}
         className={css.modal}
-        contentLabel="Example Modal"
       >
         <div className={css.content_wrapper}>
           <button className={css.btn_close} onClick={closeModal}>

@@ -8,9 +8,36 @@
   padding-left: 40px;
 }
 
+.info_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 600px;
+  align-items: center;
+}
+
+.bg_text {
+  top: 25%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  align-items: center;
+}
+
 .text {
   color: var(--primary-color-light-white);
-  font-style: 24px;
-  width: 40%;
+  font-size: 22px;
   font-weight: 500;
+}
+
+.link {
+  background-color: var(--primary-color-red);
+  padding: 14px 40px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: var(--primary-color-dark-white);
+  font-family: 'Inter', sans-serif;
 }

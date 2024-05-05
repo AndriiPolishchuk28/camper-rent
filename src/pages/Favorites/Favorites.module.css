@@ -3,4 +3,16 @@
   gap: 32px;
   display: flex;
   flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.no_items {
+  position: absolute;
+  top: 45%;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.link {
+  color: var(--primary-color-red);
 }

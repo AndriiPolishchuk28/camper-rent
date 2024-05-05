@@ -20,6 +20,7 @@
 .title_wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 8px;
 }
 
 .car_name {
@@ -43,7 +44,8 @@
 }
 
 .btn_favourites {
-  /* line-height: 3.4; */
+  width: 30px;
+  height: 30px;
 }
 
 .svg_heart {
@@ -117,7 +119,6 @@
   align-items: center;
   padding: 12px 18px;
   background-color: var(--primary-color-dark-white);
-  mix-blend-mode: multiply;
   border-radius: 100px;
   gap: 8px;
 }

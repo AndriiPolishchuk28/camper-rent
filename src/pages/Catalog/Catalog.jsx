@@ -8,12 +8,8 @@ const Catalog = () => {
   const isLoading = useSelector(selectisLoading);
   return (
     <Container>
-      {/* <div className={css.wrapper}> */}
-      {/* <CatalogFilters /> */}
       {isLoading && <Loader />}
       <ListOfCars />
-
-      {/* </div> */}
     </Container>
   );
 };

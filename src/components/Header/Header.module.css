@@ -1,3 +1,7 @@
+.navbar {
+  padding-left: 40px;
+}
+
 .nav_list {
   display: flex;
   gap: 16px;
