@@ -3,8 +3,33 @@ import { icons } from '../../assets';
 import { filtersArray } from '../../constants/constants';
 import Checkbox from './Checkbox/Checkbox';
 import { nanoid } from 'nanoid';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { selectCars } from '../../redux/cars/selectors';
 
 const CatalogFilters = () => {
+  const [filtered, setFiltered] = useState([]);
+  const [filteredCars, setFilteredCars] = useState([]);
+  const cars = useSelector(selectCars);
+
+  const handleFiltered = () => {
+    const arr = cars.filter((car) => {
+      return filtered.every((filter) => car.details[filter]);
+    });
+    console.log(arr);
+    setFilteredCars(arr);
+  };
+
+  const handleFilter = (name, checked) => {
+    setFiltered((prev) =>
+      checked ? [...prev, name] : prev.filter((item) => item !== name)
+    );
+  };
+
+  // useEffect(() => {
+  //   console.log(filtered);
+  // }, [filtered]);
+
   return (
     <div className={css.wrapper_filters}>
       <label className={css.label_text} htmlFor="location">
@@ -26,10 +51,17 @@ const CatalogFilters = () => {
         <h3 className={css.title}>Vehicle equipment</h3>
         <div className={css.ul_wrapper}>
           {Object.entries(filtersArray).map(([key, value]) => (
-            <Checkbox key={nanoid()} svgName={key} name={value} />
+            <Checkbox
+              key={nanoid()}
+              svgName={key}
+              name={value}
+              onFilter={handleFilter}
+              checkedItems={filtered}
+            />
           ))}
         </div>
       </div>
+      <button onClick={handleFiltered}>Search</button>
     </div>
   );
 };

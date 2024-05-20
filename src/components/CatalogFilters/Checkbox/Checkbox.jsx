@@ -3,11 +3,14 @@ import css from './Checkbox.module.css';
 import classNames from 'classnames';
 import { icons } from '../../../assets';
 
-const Checkbox = ({ name, svgName }) => {
-  const [checked, setChecked] = useState(false);
-  const handleChecked = () => {
-    setChecked(!checked);
+const Checkbox = ({ name, svgName, onFilter, checkedItems }) => {
+  const checked = checkedItems.includes(svgName);
+
+  const handleChecked = (e) => {
+    const { checked } = e.target;
+    onFilter(svgName, checked);
   };
+
   return (
     <label className={css.label}>
       <input
@@ -15,7 +18,7 @@ const Checkbox = ({ name, svgName }) => {
         type="checkbox"
         onChange={handleChecked}
         checked={checked}
-        id={name}
+        name={svgName}
       />
       <div
         className={classNames(
